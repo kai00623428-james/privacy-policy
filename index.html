@@ -188,6 +188,26 @@
     a:hover {
       text-decoration: underline;
     }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-size: 0.85em;
+      padding: 2px 6px;
+      background-color: rgba(79, 70, 229, 0.08);
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      word-break: break-all;
+      overflow-wrap: anywhere;
+      white-space: normal;
+      display: inline-block;
+      max-width: 100%;
+      vertical-align: middle;
+    }
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 16px 0;
+    }
   </style>
 </head>
 <body>
@@ -291,7 +311,7 @@
         <li>捲動至「<strong>☁️ 雲端備份與帳號</strong>」區塊。</li>
         <li>點擊最下方紅色按鈕「<strong>刪除帳號與雲端關聯資料</strong>」。</li>
         <li>在彈出的雙重防呆視窗中輸入「<code>確認刪除</code>」，並可勾選是否一併清空此手機上的本地 IndexedDB 資料。</li>
-        <li>點擊確認後，系統立即分塊批次刪除雲端 Firestore 所有個人收支（<code>artifacts/{appId}/users/{uid}/expenses</code> 與 <code>userSettings</code>），並永久註銷 Firebase 登入帳號憑證。</li>
+        <li>點擊確認後，系統立即分塊批次刪除雲端 Firestore 所有個人收支（<code>artifacts/<wbr>{appId}/<wbr>users/<wbr>{uid}/<wbr>expenses</code> 與 <code>userSettings</code>），並永久註銷 Firebase 登入帳號憑證。</li>
       </ol>
 
       <h3 style="margin-top: 24px;">途徑 2：外部網頁與電子郵件申請管道（已解除安裝 App 者適用）</h3>
