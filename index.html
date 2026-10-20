@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隱私權政策與服務條款 | 記帳小幫手 Expense Tracker</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --accent-red: #ef4444;
+      --accent-emerald: #10b981;
+      --accent-amber: #f59e0b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-page: #0b0f19;
+        --bg-card: #131b2e;
+        --text-main: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border: #1e293b;
+        --primary: #6366f1;
+        --primary-hover: #818cf8;
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 24px 16px;
+    }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 20px 24px;
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+      border-radius: 20px;
+      margin-bottom: 32px;
+      border: 1px solid var(--border);
+    }
+    .header h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+    .header p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 12px;
+      background-color: rgba(16, 185, 129, 0.15);
+      color: var(--accent-emerald);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    }
+    .card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 16px 0 8px;
+      color: var(--text-main);
+    }
+    .card p {
+      margin-bottom: 12px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .card ul, .card ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    .card li {
+      margin-bottom: 8px;
+    }
+    .card strong {
+      color: var(--text-main);
+    }
+    .highlight-box {
+      background-color: rgba(79, 70, 229, 0.08);
+      border-left: 4px solid var(--primary);
+      padding: 16px;
+      border-radius: 8px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .danger-box {
+      background-color: rgba(239, 68, 68, 0.08);
+      border-left: 4px solid var(--accent-red);
+      padding: 16px;
+      border-radius: 8px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .emerald-box {
+      background-color: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid var(--accent-emerald);
+      padding: 16px;
+      border-radius: 8px;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    .data-table th, .data-table td {
+      border: 1px solid var(--border);
+      padding: 12px 14px;
+      text-align: left;
+    }
+    .data-table th {
+      background-color: rgba(79, 70, 229, 0.06);
+      color: var(--text-main);
+      font-weight: 600;
+    }
+    .footer {
+      text-align: center;
+      padding: 32px 16px;
+      color: var(--text-muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+    .btn-delete-request {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 20px;
+      background-color: var(--accent-red);
+      color: #ffffff !important;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: opacity 0.2s;
+    }
+    .btn-delete-request:hover {
+      opacity: 0.9;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- 頂部標題與生效資訊 -->
+    <header class="header">
+      <h1>智慧理財記帳小幫手</h1>
+      <p>Expense Tracker App 官方隱私權政策與服務條款</p>
+      <p style="margin-top: 10px; font-size: 13px;">生效日期：2026 年 10 月 20 日 ｜ 最新版本：v2.7.2</p>
+    </header>
+
+    <!-- 0. 核心隱私原則承諾 -->
+    <section class="card">
+      <h2>🛡️ 核心隱私原則承諾 (Privacy-First)</h2>
+      <div class="emerald-box">
+        <strong>個人財務資料極度敏感，我們嚴格遵守以下四項鐵律：</strong>
+        <ol style="margin-top: 8px; margin-bottom: 0;">
+          <li><strong>離線優先 (Offline-First)</strong>：未主動啟用雲端備份前，您的記帳資料 100% 僅儲存在您的手機本地設備資料庫（IndexedDB）中。</li>
+          <li><strong>絕不向第三方販售</strong>：我們絕不向廣告商、資料仲介商或任何第三方實體販售、租借或交換您的個人收支數據。</li>
+          <li><strong>短暫性影像處理 (Ephemeral Processing)</strong>：拍照辨識菜單或發票僅在本地完成分析即時釋放記憶體，絕不上傳公開圖庫，亦不留存原圖。</li>
+          <li><strong>被遺忘權 (Right to be Forgotten)</strong>：您可隨時在 App 內或透過本網頁一鍵徹底銷毀雲端與本機所有個人數據。</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 1. 我們收集的資料項目與用途說明 -->
+    <section class="card">
+      <h2>📊 資料收集項目與使用目的 (Data Safety)</h2>
+      <p>依據 Google Play「資料安全聲明 (Data Safety Section)」規範，我們公開透明揭露所有處理的資料類型：</p>
+      
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>資料類別</th>
+            <th>具體項目</th>
+            <th>用途與處理方式</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>個人帳號資訊</strong></td>
+            <td>Email、UID（僅登入時）</td>
+            <td>使用 Google Firebase Authentication 進行身分驗證，用於提供跨裝置雲端資料備份。若選擇離線使用，無需提供任何帳號資料。</td>
+          </tr>
+          <tr>
+            <td><strong>財務記帳資料</strong></td>
+            <td>消費金額、類別、品名、備註、預算設定、信用卡設定</td>
+            <td>提供日常記帳統計、圖表分析、預算超支試算與分帳結算。純本地運算，僅在使用者主動啟用「雲端備份」時加密儲存於 Google Cloud Firestore 專屬路徑。</td>
+          </tr>
+          <tr>
+            <td><strong>硬體相機權限</strong></td>
+            <td>拍攝菜單、發票、收據</td>
+            <td>僅在點擊相機拍照時請求相機權限。影像傳送至 AI 視覺引擎即時辨識為收支明細後立即銷毀暫存，絕不擅自保存至公開相簿，亦不擅自轉傳第三方。</td>
+          </tr>
+          <tr>
+            <td><strong>設備技術資訊</strong></td>
+            <td>離線快取狀態、本機主題偏好</td>
+            <td>透過 PWA Service Worker 與本機 LocalStorage / IndexedDB 維持無網路環境下的流暢操作與夜間模式切換。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 2. 相機存取權限特別宣告 -->
+    <section class="card">
+      <h2>📷 相機權限與影像處理特別宣告</h2>
+      <p>為了支援「<strong>AI 菜單辨識認領（切西瓜分帳）</strong>」與「<strong>AI 發票拍照記帳</strong>」功能，本應用程式需使用裝置相機權限：</p>
+      <ul>
+        <li><strong>動態即時授權</strong>：只有在您主動點擊「拍照 📷」按鈕時，系統才會向您請求相機權限，您隨時可以在系統設定中關閉此權限。</li>
+        <li><strong>短暫性處理原則</strong>：照片傳入分析流水線完成數值解析後，影像緩衝區立即銷毀清空。</li>
+        <li><strong>隱私保護承諾</strong>：我們絕不會在背景偷偷開啟相機，亦不會將您所拍攝的餐飲照片、發票或店內畫面用於機器學習公開訓練集。</li>
+      </ul>
+    </section>
+
+    <!-- 3. 資料儲存、傳輸安全與第三方服務 -->
+    <section class="card">
+      <h2>🔒 傳輸加密與基礎設施安全</h2>
+      <p>我們採用全球頂尖雲端安全防護標準，確保您的資料無懈可擊：</p>
+      <ul>
+        <li><strong>全端傳輸加密 (HTTPS / TLS 1.3)</strong>：所有與雲端伺服器（Firebase 與 AI 端點）之連線，強制使用最高安全等級加密，嚴防中間人竊聽或竄改。</li>
+        <li><strong>權限隔離架構</strong>：Firestore 雲端資料庫設置嚴格的安全性規則（Security Rules），限制只有經 Firebase 授權登入的本人 UID，才能讀寫該帳號底下的專屬路徑。</li>
+        <li><strong>無第三方追蹤代碼</strong>：本應用程式不包含 Facebook Pixel、AppsFlyer 或任何第三方廣告追蹤 SDK，徹底還給使用者純淨無追蹤的記帳體驗。</li>
+      </ul>
+    </section>
+
+    <!-- 4. 帳號與雲端資料徹底刪除權利 (Google Play 合規重點) -->
+    <section class="card">
+      <h2>🗑️ 帳號與雲端資料徹底刪除 (Google Play 合規要求)</h2>
+      <p>依據 Google Play 最新開發人員帳號刪除政策與 GDPR 被遺忘權要求，我們提供<strong>雙軌完整刪除途徑</strong>：</p>
+      
+      <div class="danger-box">
+        <strong>重要注意事項：</strong>帳號刪除一經確認執行，所有儲存於雲端的個人收支紀錄將被永久銷毀，無法還原或復原。
+      </div>
+
+      <h3>途徑 1：App 內隨時一鍵自主註銷與清除（最推薦）</h3>
+      <ol>
+        <li>打開「<strong>記帳小幫手 Expense Tracker</strong>」App。</li>
+        <li>切換至底部導航列最右側「<strong>設定 ⚙️</strong>」分頁。</li>
+        <li>捲動至「<strong>☁️ 雲端備份與帳號</strong>」區塊。</li>
+        <li>點擊最下方紅色按鈕「<strong>刪除帳號與雲端關聯資料</strong>」。</li>
+        <li>在彈出的雙重防呆視窗中輸入「<code>確認刪除</code>」，並可勾選是否一併清空此手機上的本地 IndexedDB 資料。</li>
+        <li>點擊確認後，系統立即分塊批次刪除雲端 Firestore 所有個人收支（<code>artifacts/{appId}/users/{uid}/expenses</code> 與 <code>userSettings</code>），並永久註銷 Firebase 登入帳號憑證。</li>
+      </ol>
+
+      <h3 style="margin-top: 24px;">途徑 2：外部網頁與電子郵件申請管道（已解除安裝 App 者適用）</h3>
+      <p>若您已經從手機解除安裝本應用程式，或因裝置損壞無法登入，您可以直接透過以下方式申請刪除帳號與關聯資料：</p>
+      <ul>
+        <li><strong>合規申請專用信箱</strong>：<a href="mailto:kai00623428@gmail.com?subject=申請刪除記帳小幫手帳號與資料">kai00623428@gmail.com</a></li>
+        <li><strong>信件主旨請註明</strong>：<code>申請刪除記帳小幫手帳號與資料</code></li>
+        <li><strong>信件內容請提供</strong>：您當初於 App 內註冊登入時所使用的 Email 信箱位址。</li>
+        <li><strong>處理時限</strong>：我們的工程團隊在收到信件後，將於 <strong>7 個工作日內</strong>自 Firebase 後台徹底抹除該帳號及雲端所有關聯記錄，並以 Email 回覆確認刪除完成。</li>
+      </ul>
+      <a href="mailto:kai00623428@gmail.com?subject=申請刪除記帳小幫手帳號與資料" class="btn-delete-request">
+        ✉️ 立即寄信申請徹底刪除帳號與資料
+      </a>
+    </section>
+
+    <!-- 5. 服務條款與法律免責聲明 -->
+    <section class="card">
+      <h2>⚖️ 服務條款與法律免責聲明</h2>
+      <ul>
+        <li><strong>個人輔助工具屬性</strong>：本應用程式為個人日常收支規劃與聚餐分帳之輔助軟體，不構成任何證券投資、稅務規劃或法律會計諮詢建議。</li>
+        <li><strong>匯率與 AI 辨識參考性</strong>：多國外幣折算採用公開參考匯率，AI 拍照辨識結果受單據清晰度、光線與排版影響，使用者於記帳時應自行核對金額確認。</li>
+        <li><strong>離線資料備份提醒</strong>：在未啟用雲端同步之純離線模式下，若使用者主動清除瀏覽器快取、格式化設備或解除安裝，本地資料庫可能遺失，建議定期於設定頁匯出 JSON 備份檔。</li>
+      </ul>
+    </section>
+
+    <!-- 6. 政策修訂與聯絡方式 -->
+    <section class="card">
+      <h2>📬 條款修訂與開發團隊聯絡窗口</h2>
+      <p>我們可能會因應法規更新或新功能推出而不定時修訂本隱私權政策。重大變更將於 App 內版本更新彈窗中顯著公告。</p>
+      <ul style="margin-top: 12px;">
+        <li><strong>專屬客服與隱私諮詢信箱：</strong><a href="mailto:kai00623428@gmail.com">kai00623428@gmail.com</a></li>
+        <li><strong>官方公開網址：</strong><a href="https://myapp2-2888e.web.app/privacy.html" target="_blank" rel="noopener">https://myapp2-2888e.web.app/privacy.html</a></li>
+      </ul>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+      <p>© 2026 記帳小幫手 Expense Tracker. All rights reserved.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
